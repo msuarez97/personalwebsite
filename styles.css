@@ -122,12 +122,12 @@ h2::after {
 .facts li {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 8px;
-  padding: 14px 0;
+  gap: 10px;
+  padding: 24px 0;
   border-top: 1px solid var(--line);
   line-height: 1.6;
 }
-.facts li:first-child { border-top: none; padding-top: 4px; }
+.facts li:first-child { border-top: none; padding-top: 8px; }
 .facts .marks { display: flex; flex-wrap: wrap; align-items: center; row-gap: 10px; margin-bottom: 4px; }
 .facts .marks img { height: 28px; width: auto; }
 .facts .flag { width: 44px; height: 28px; border-radius: 3px; box-shadow: 0 0 0 1px var(--line); }
