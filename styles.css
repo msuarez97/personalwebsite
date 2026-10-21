@@ -117,21 +117,20 @@ h2::after {
 .headshot.open .alt { opacity: 1; }
 .about p, .contact p { max-width: 640px; }
 
-/* About bullets: logo column + text */
-.facts { list-style: none; margin: 0 0 22px; padding: 0; max-width: 660px; }
+/* About bullets: a small group of logos beside each line of prose */
+.facts { list-style: none; margin: 0 0 22px; padding: 0; max-width: 680px; }
 .facts li {
   display: grid;
-  grid-template-columns: 96px 1fr;
-  gap: 18px;
-  align-items: center;
-  padding: 9px 0;
-  font-size: 15.5px;
-  line-height: 1.5;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  padding: 14px 0;
+  border-top: 1px solid var(--line);
+  line-height: 1.6;
 }
-.facts + .facts { border-top: 1px solid var(--line); padding-top: 14px; }
-.facts .mark { display: flex; align-items: center; height: 30px; }
-.facts .mark img { max-height: 26px; max-width: 96px; width: auto; }
-.facts .flag { width: 40px; height: 24px; border-radius: 3px; box-shadow: 0 0 0 1px var(--line); }
+.facts li:first-child { border-top: none; padding-top: 4px; }
+.facts .marks { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; }
+.facts .marks img { height: 20px; width: auto; }
+.facts .flag { width: 32px; height: 20px; border-radius: 3px; box-shadow: 0 0 0 1px var(--line); }
 .facts strong { color: var(--accent); font-weight: 600; }
 .next-label {
   font-family: "Fraunces", Georgia, serif;
@@ -310,8 +309,6 @@ footer { text-align: center; color: var(--muted); font-size: 14px; padding: 40px
   .site-header { flex-wrap: wrap; row-gap: 6px; padding-top: 14px; padding-bottom: 12px; }
   .site-header nav { gap: 14px; font-size: 13.5px; flex-wrap: wrap; }
   section { padding: 56px 0; }
-  .facts li { grid-template-columns: 72px 1fr; gap: 14px; font-size: 15px; }
-  .facts .mark img { max-width: 72px; max-height: 22px; }
   .about { flex-direction: column; align-items: flex-start; gap: 28px; }
   .headshot { width: 150px; height: 150px; }
 }
