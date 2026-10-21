@@ -4,19 +4,24 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Maria Suarez</title>
-  <meta name="description" content="Maria Suarez — MBA candidate at UT Austin McCombs exploring product management and strategy in tech.">
+  <meta name="description" content="Maria Suarez — MBA candidate at UT Austin McCombs exploring product management and strategy roles.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Fraunces:opsz,wght@9..144,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
+  <!-- parallax background layers -->
+  <div class="bg-layer bg-far" aria-hidden="true"></div>
+  <div class="bg-layer bg-near" aria-hidden="true"></div>
+
   <header class="site-header">
     <a class="name" href="#top">Maria Suarez</a>
     <nav>
       <a href="#about">About</a>
-      <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
@@ -24,29 +29,156 @@
   <main id="top">
     <!-- 1. About me -->
     <section id="about" class="about">
-      <h1>Hi, I'm Maria.</h1>
-      <p>
-        I'm a first-year MBA candidate at UT Austin McCombs (Class of 2028) with six years of
-        experience across marketing and project management — from running cross-functional dev
-        teams at a software agency to leading change management for BCG's firmwide effort to
-        embed AI into its go-to-market offers. Being that close to innovation made me want to help
-        shape it, not just enable it. That's why I'm exploring product management and strategy
-        roles in tech.
-      </p>
-      <p class="links">
-        <a href="https://www.linkedin.com/in/mariafsuarez/" target="_blank" rel="noopener">LinkedIn ↗</a>
-        <a href="assets/Maria-Suarez-CV.pdf" download>Download CV ↓</a>
-      </p>
+      <img class="headshot" src="assets/headshot.jpg" alt="Portrait of Maria Suarez">
+      <div>
+        <h1>Hi, I'm Maria.</h1>
+        <p>
+          I'm a first-year MBA candidate at UT Austin McCombs (Class of 2028) from Costa Rica with six
+          years of experience across marketing and project management, from running cross-functional
+          dev teams at a software agency to leading change management for BCG's firmwide effort to
+          embed AI into its go-to-market offers. Being that close to innovation made me want to help
+          shape it, not just enable it. That's why I'm exploring product management and strategy
+          roles where I can help shape what gets built next.
+        </p>
+        <p class="links">
+          <a href="https://www.linkedin.com/in/mariafsuarez/" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a href="assets/Maria-Suarez-CV.pdf" download>Download CV ↓</a>
+        </p>
+      </div>
     </section>
 
-    <!-- 2. Skills -->
+    <!-- 2. Featured projects: hover / tap a tile to see the details -->
+    <section id="projects">
+      <h2>Featured projects</h2>
+      <div class="grid">
+
+        <article class="project">
+          <div class="thumb" tabindex="0">
+            <img src="assets/projects/supplychainnow.jpg" alt="Supply Chain Now website homepage" loading="lazy">
+            <div class="overlay">
+              <p class="role">Product Owner &amp; Client Account Manager</p>
+              <p>Led the website redesign and content management hub from ideation through setup and launch.</p>
+            </div>
+          </div>
+          <h3><a href="https://supplychainnow.com/" target="_blank" rel="noopener">Supply Chain Now ↗</a></h3>
+        </article>
+
+        <article class="project">
+          <div class="thumb" tabindex="0">
+            <img src="assets/projects/vector.jpg" alt="Vector Global Logistics website homepage" loading="lazy">
+            <div class="overlay">
+              <p class="role">Product Owner &amp; Client Account Manager</p>
+              <p>Led ongoing website content updates and ran discovery for an internal HR performance-tracking portal.</p>
+            </div>
+          </div>
+          <h3><a href="https://vectorgl.com/" target="_blank" rel="noopener">Vector Global Logistics ↗</a></h3>
+        </article>
+
+        <article class="project">
+          <div class="thumb" tabindex="0">
+            <img src="assets/projects/vinoapp.jpg" alt="VinoApp mobile app screen" loading="lazy" class="contain">
+            <div class="overlay">
+              <p class="role">Marketing Manager</p>
+              <p>Managed the WordPress e-commerce storefront and omnichannel marketing campaigns.</p>
+            </div>
+          </div>
+          <h3>VinoApp</h3>
+        </article>
+
+        <article class="project">
+          <div class="thumb" tabindex="0">
+            <img src="assets/projects/motiva.jpg" alt="Motiva product page" loading="lazy">
+            <div class="overlay">
+              <p class="role">Staff Business Analyst</p>
+              <p>Managed new product page releases, data integrations and website localization.</p>
+            </div>
+          </div>
+          <h3><a href="https://motiva.health/" target="_blank" rel="noopener">Motiva ↗</a></h3>
+        </article>
+
+        <article class="project">
+          <div class="thumb" tabindex="0">
+            <img src="assets/projects/justinkhanna.jpg" alt="Justin Khanna website homepage" loading="lazy">
+            <div class="overlay">
+              <p class="role">Freelance Project Manager</p>
+              <p>Set up the Squarespace site and designed product tiers, pricing and automation.</p>
+            </div>
+          </div>
+          <h3><a href="https://www.justinkhanna.com/" target="_blank" rel="noopener">Justin Khanna ↗</a></h3>
+        </article>
+
+        <article class="project">
+          <div class="thumb" tabindex="0">
+            <img src="assets/projects/co2ai.jpg" alt="CO2 AI website homepage" loading="lazy">
+            <div class="overlay">
+              <p class="role">Project Manager</p>
+              <p>Led design and hosting to launch the site internally within BCG, then release it externally.</p>
+            </div>
+          </div>
+          <h3><a href="https://co2ai.com/" target="_blank" rel="noopener">CO2 AI ↗</a></h3>
+        </article>
+
+        <article class="project">
+          <div class="thumb" tabindex="0">
+            <div class="placeholder">
+              <!-- starburst icon -->
+              <svg viewBox="0 0 48 48" aria-hidden="true" class="icon-claude">
+                <g stroke="currentColor" stroke-width="4.5" stroke-linecap="round">
+                  <line x1="24" y1="5" x2="24" y2="43"/>
+                  <line x1="5" y1="24" x2="43" y2="24"/>
+                  <line x1="10.6" y1="10.6" x2="37.4" y2="37.4"/>
+                  <line x1="37.4" y1="10.6" x2="10.6" y2="37.4"/>
+                </g>
+              </svg>
+              <span>Claude Skills</span>
+            </div>
+            <div class="overlay">
+              <p class="role">Creator &amp; Maintainer</p>
+              <p>Created, maintained and socialized Claude skills for a website Q&amp;A agent (kept current with knowledge-base updates), email campaign content, town hall prep, and more.</p>
+            </div>
+          </div>
+          <h3>Claude Skills</h3>
+        </article>
+
+        <article class="project">
+          <div class="thumb" tabindex="0">
+            <div class="placeholder">
+              <!-- Salesforce-style cloud mark -->
+              <svg viewBox="0 0 120 80" aria-hidden="true" class="icon-salesforce">
+                <path d="M50 14c5-5 12-8 19-8 10 0 18 5 22 13 4-2 8-3 12-3 14 0 25 11 25 25s-11 25-25 25c-2 0-3 0-5-1-3 6-10 10-17 10-3 0-6-1-9-2-3 8-11 13-20 13-10 0-18-6-21-15-1 0-3 0-4 0-11 0-20-9-20-20 0-7 4-14 10-17-1-3-2-6-2-9 0-12 10-21 22-21 6 0 12 3 16 7z" transform="translate(-8 -3) scale(0.95)"/>
+                <text x="54" y="44" text-anchor="middle">salesforce</text>
+              </svg>
+            </div>
+            <div class="overlay">
+              <p class="role">CRM Campaign Manager</p>
+              <p>Built and ran CRM email campaigns in SAP, Salesforce, HubSpot and Mailchimp.</p>
+            </div>
+          </div>
+          <h3>Email campaigns</h3>
+        </article>
+
+        <article class="project">
+          <div class="thumb" tabindex="0">
+            <img src="assets/projects/spinningthreads.jpg" alt="Spinning Threads book cover" loading="lazy" class="contain">
+            <div class="overlay">
+              <p class="role">Author · Published April 2021</p>
+              <p>A novel about love and storytelling: a young journalist trapped by a hurricane befriends an older woman and uncovers a decades-old mystery.</p>
+            </div>
+          </div>
+          <h3><a href="https://www.amazon.com/dp/1636768571" target="_blank" rel="noopener">Spinning Threads ↗</a></h3>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- 3. Skills -->
     <section id="skills">
       <h2>Skills</h2>
       <div class="skills">
 
         <div class="skill-card">
           <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 4v16M3 9h5M3 14h5"/></svg>
-          <h3>Product &amp; delivery</h3>
+          <h3>Product, project management &amp; delivery</h3>
           <ul><li>Scrum / Agile</li><li>Jira</li><li>Smartsheet</li><li>ServiceNow</li><li>Figma</li></ul>
         </div>
 
@@ -77,100 +209,10 @@
       </div>
     </section>
 
-    <!-- 3. Featured projects -->
-    <section id="projects">
-      <h2>Featured projects</h2>
-      <div class="grid">
-
-        <article class="project">
-          <div class="placeholder">
-            <!-- starburst icon -->
-            <svg viewBox="0 0 48 48" aria-hidden="true" class="icon-claude">
-              <g stroke="currentColor" stroke-width="4.5" stroke-linecap="round">
-                <line x1="24" y1="5" x2="24" y2="43"/>
-                <line x1="5" y1="24" x2="43" y2="24"/>
-                <line x1="10.6" y1="10.6" x2="37.4" y2="37.4"/>
-                <line x1="37.4" y1="10.6" x2="10.6" y2="37.4"/>
-              </g>
-            </svg>
-            <span>Claude Skills</span>
-          </div>
-          <h3>Claude Skills</h3>
-          <p class="role">Creator &amp; maintainer</p>
-          <p>Created, maintained and socialized Claude skills for a website Q&amp;A agent (kept current with knowledge-base updates), email campaign content, town hall prep, and more.</p>
-        </article>
-
-        <article class="project">
-          <img src="assets/projects/supplychainnow.jpg" alt="Supply Chain Now website homepage" loading="lazy">
-          <h3><a href="https://supplychainnow.com/" target="_blank" rel="noopener">Supply Chain Now ↗</a></h3>
-          <p class="role">Product owner &amp; client account manager</p>
-          <p>Led the website redesign and content management hub from ideation through setup and launch.</p>
-        </article>
-
-        <article class="project">
-          <img src="assets/projects/vector.jpg" alt="Vector Global Logistics website homepage" loading="lazy">
-          <h3><a href="https://vectorgl.com/" target="_blank" rel="noopener">Vector Global Logistics ↗</a></h3>
-          <p class="role">Product owner &amp; client account manager</p>
-          <p>Led ongoing website content updates and ran discovery for an internal HR performance-tracking portal.</p>
-        </article>
-
-        <article class="project">
-          <img src="assets/projects/vinoapp.jpg" alt="VinoApp mobile app screen" loading="lazy" class="contain">
-          <h3>VinoApp</h3>
-          <p class="role">Marketing manager</p>
-          <p>Managed the WordPress e-commerce storefront and omnichannel marketing campaigns.</p>
-        </article>
-
-        <article class="project">
-          <img src="assets/projects/motiva.jpg" alt="Motiva product page" loading="lazy">
-          <h3><a href="https://motiva.health/" target="_blank" rel="noopener">Motiva ↗</a></h3>
-          <p class="role">Staff business analyst</p>
-          <p>Managed new product page releases, data integrations and website localization.</p>
-        </article>
-
-        <article class="project">
-          <img src="assets/projects/co2ai.jpg" alt="CO2 AI website homepage" loading="lazy">
-          <h3><a href="https://co2ai.com/" target="_blank" rel="noopener">CO2 AI ↗</a></h3>
-          <p class="role">Project manager</p>
-          <p>Led design and hosting to launch the site internally within BCG, then release it externally.</p>
-        </article>
-
-        <article class="project">
-          <div class="placeholder">
-            <!-- envelope icon -->
-            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
-            <span>SAP · SFMC · HubSpot · Mailchimp</span>
-          </div>
-          <h3>Email campaigns</h3>
-          <p class="role">CRM campaign manager</p>
-          <p>Built and ran CRM email campaigns in SAP, Salesforce, HubSpot and Mailchimp.</p>
-        </article>
-
-        <article class="project">
-          <img src="assets/projects/justinkhanna.jpg" alt="Justin Khanna website homepage" loading="lazy">
-          <h3><a href="https://www.justinkhanna.com/" target="_blank" rel="noopener">Justin Khanna ↗</a></h3>
-          <p class="role">Freelance project manager</p>
-          <p>Set up the Squarespace site and designed product tiers, pricing and automation.</p>
-        </article>
-
-        <article class="project">
-          <div class="placeholder">
-            <!-- book icon -->
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5V5a2 2 0 0 1 2-2h14v16H6.5a2.5 2.5 0 0 0 0 5H20"/><path d="M8 7h8"/></svg>
-            <span>Spinning Threads · a novel</span>
-          </div>
-          <h3><a href="https://www.amazon.com/dp/1636768571" target="_blank" rel="noopener">Spinning Threads ↗</a></h3>
-          <p class="role">Author · published April 2021</p>
-          <p>A novel about love and storytelling: a young journalist trapped by a hurricane befriends an older woman and uncovers a decades-old mystery.</p>
-        </article>
-
-      </div>
-    </section>
-
     <!-- 4. Contact -->
     <section id="contact" class="contact">
       <h2>Contact me</h2>
-      <p>I'd love to connect — reach out about product, strategy, or anything in between.</p>
+      <p>I'd love to connect! Reach out about product, strategy, writing, startups, literature, or anything in between.</p>
       <p class="links">
         <a href="mailto:maria.suarez@my.utexas.edu">maria.suarez@my.utexas.edu</a>
         <a href="https://www.linkedin.com/in/mariafsuarez/" target="_blank" rel="noopener">LinkedIn ↗</a>
