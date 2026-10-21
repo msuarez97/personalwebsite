@@ -128,9 +128,16 @@ h2::after {
   line-height: 1.6;
 }
 .facts li:first-child { border-top: none; padding-top: 4px; }
-.facts .marks { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; }
-.facts .marks img { height: 20px; width: auto; }
-.facts .flag { width: 32px; height: 20px; border-radius: 3px; box-shadow: 0 0 0 1px var(--line); }
+.facts .marks { display: flex; flex-wrap: wrap; align-items: center; row-gap: 10px; margin-bottom: 4px; }
+.facts .marks img { height: 28px; width: auto; }
+.facts .flag { width: 44px; height: 28px; border-radius: 3px; box-shadow: 0 0 0 1px var(--line); }
+/* even spacing with a thin green divider between logos */
+.facts .marks > * + * {
+  margin-left: 18px;
+  padding-left: 18px;
+  border-left: 2px solid var(--leaf);
+  box-sizing: content-box;
+}
 .facts strong { color: var(--accent); font-weight: 600; }
 .next-label {
   font-family: "Fraunces", Georgia, serif;
@@ -338,5 +345,8 @@ footer { text-align: center; color: var(--muted); font-size: 14px; padding: 40px
   .site-header nav { gap: 14px; font-size: 13.5px; flex-wrap: wrap; }
   section { padding: 56px 0; }
   .about { flex-direction: column; align-items: flex-start; gap: 28px; }
+  .facts .marks img { height: 24px; }
+  .facts .flag { width: 38px; height: 24px; }
+  .facts .marks > * + * { margin-left: 12px; padding-left: 12px; }
   .headshot { width: 150px; height: 150px; }
 }
