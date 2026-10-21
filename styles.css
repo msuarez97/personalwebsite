@@ -350,3 +350,53 @@ footer { text-align: center; color: var(--muted); font-size: 14px; padding: 40px
   .facts .marks > * + * { margin-left: 12px; padding-left: 12px; }
   .headshot { width: 150px; height: 150px; }
 }
+
+/* Fun fact generator */
+.fun p { max-width: 640px; }
+.fact-card {
+  margin-top: 28px;
+  max-width: 640px;
+  padding: 28px 30px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--card) var(--grain);
+  box-shadow: 0 12px 30px -22px rgba(42, 58, 38, .5);
+}
+.fact-topic {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--earth);
+  background: #f1e6da;
+  border-radius: 999px;
+  padding: 3px 12px;
+}
+.fun .fact-text {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 1.3rem;
+  line-height: 1.45;
+  color: var(--accent);
+  margin: 16px 0 24px;
+  min-height: 3.6em;
+}
+.fact-card.show .fact-topic,
+.fact-card.show .fact-text { animation: fact-in .45s ease; }
+@keyframes fact-in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+.fact-button {
+  font: 600 15px "Inter", sans-serif;
+  color: #f5f1e8;
+  background: var(--accent);
+  border: none;
+  border-radius: 999px;
+  padding: 12px 22px;
+  cursor: pointer;
+  transition: background .2s ease, transform .15s ease;
+}
+.fact-button:hover { background: var(--leaf); }
+.fact-button:active { transform: scale(.97); }
+.fact-button:focus-visible { outline: 3px solid var(--leaf); outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) {
+  .fact-card.show .fact-topic, .fact-card.show .fact-text { animation: none; }
+}
