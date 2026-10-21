@@ -29,7 +29,11 @@
   <main id="top">
     <!-- 1. About me -->
     <section id="about" class="about">
-      <img class="headshot" src="assets/headshot.jpg" alt="Portrait of Maria Suarez">
+      <!-- second photo fades in on hover / tap -->
+      <div class="headshot" tabindex="0">
+        <img src="assets/headshot.jpg" alt="Portrait of Maria Suarez">
+        <img class="alt" src="assets/headshot-2.jpg" alt="Maria at Manuel Antonio, Costa Rica">
+      </div>
       <div>
         <h1>Hi, I'm Maria.</h1>
         <p>
@@ -50,72 +54,73 @@
     <!-- 2. Featured projects: hover / tap a tile to see the details -->
     <section id="projects">
       <h2>Featured projects</h2>
+      <p class="hint">Hover over (or tap) a project for a short description, and reach out to talk more in depth!</p>
       <div class="grid">
 
         <article class="project">
           <div class="thumb" tabindex="0">
             <img src="assets/projects/supplychainnow.jpg" alt="Supply Chain Now website homepage" loading="lazy">
             <div class="overlay">
-              <p class="role">Product Owner &amp; Client Account Manager</p>
               <p>Led the website redesign and content management hub from ideation through setup and launch.</p>
             </div>
           </div>
           <h3><a href="https://supplychainnow.com/" target="_blank" rel="noopener">Supply Chain Now ↗</a></h3>
+          <p class="role">Product Owner &amp; Client Account Manager</p>
         </article>
 
         <article class="project">
           <div class="thumb" tabindex="0">
             <img src="assets/projects/vector.jpg" alt="Vector Global Logistics website homepage" loading="lazy">
             <div class="overlay">
-              <p class="role">Product Owner &amp; Client Account Manager</p>
               <p>Led ongoing website content updates and ran discovery for an internal HR performance-tracking portal.</p>
             </div>
           </div>
           <h3><a href="https://vectorgl.com/" target="_blank" rel="noopener">Vector Global Logistics ↗</a></h3>
+          <p class="role">Product Owner &amp; Client Account Manager</p>
         </article>
 
         <article class="project">
           <div class="thumb" tabindex="0">
             <img src="assets/projects/vinoapp.jpg" alt="VinoApp mobile app screen" loading="lazy" class="contain">
             <div class="overlay">
-              <p class="role">Marketing Manager</p>
               <p>Managed the WordPress e-commerce storefront and omnichannel marketing campaigns.</p>
             </div>
           </div>
           <h3>VinoApp</h3>
+          <p class="role">Marketing Manager</p>
         </article>
 
         <article class="project">
           <div class="thumb" tabindex="0">
             <img src="assets/projects/motiva.jpg" alt="Motiva product page" loading="lazy">
             <div class="overlay">
-              <p class="role">Staff Business Analyst</p>
               <p>Managed new product page releases, data integrations and website localization.</p>
             </div>
           </div>
           <h3><a href="https://motiva.health/" target="_blank" rel="noopener">Motiva ↗</a></h3>
+          <p class="role">Staff Business Analyst</p>
         </article>
 
         <article class="project">
           <div class="thumb" tabindex="0">
             <img src="assets/projects/justinkhanna.jpg" alt="Justin Khanna website homepage" loading="lazy">
             <div class="overlay">
-              <p class="role">Freelance Project Manager</p>
               <p>Set up the Squarespace site and designed product tiers, pricing and automation.</p>
             </div>
           </div>
           <h3><a href="https://www.justinkhanna.com/" target="_blank" rel="noopener">Justin Khanna ↗</a></h3>
+          <p class="role">Freelance Project Manager</p>
         </article>
 
         <article class="project">
           <div class="thumb" tabindex="0">
             <img src="assets/projects/co2ai.jpg" alt="CO2 AI website homepage" loading="lazy">
             <div class="overlay">
-              <p class="role">Project Manager</p>
               <p>Led design and hosting to launch the site internally within BCG, then release it externally.</p>
             </div>
           </div>
           <h3><a href="https://co2ai.com/" target="_blank" rel="noopener">CO2 AI ↗</a></h3>
+          <p class="role">Project Manager</p>
         </article>
 
         <article class="project">
@@ -133,11 +138,11 @@
               <span>Claude Skills</span>
             </div>
             <div class="overlay">
-              <p class="role">Creator &amp; Maintainer</p>
               <p>Created, maintained and socialized Claude skills for a website Q&amp;A agent (kept current with knowledge-base updates), email campaign content, town hall prep, and more.</p>
             </div>
           </div>
           <h3>Claude Skills</h3>
+          <p class="role">Creator &amp; Maintainer</p>
         </article>
 
         <article class="project">
@@ -150,22 +155,22 @@
               </svg>
             </div>
             <div class="overlay">
-              <p class="role">CRM Campaign Manager</p>
               <p>Built and ran CRM email campaigns in SAP, Salesforce, HubSpot and Mailchimp.</p>
             </div>
           </div>
           <h3>Email campaigns</h3>
+          <p class="role">CRM Campaign Manager</p>
         </article>
 
         <article class="project">
           <div class="thumb" tabindex="0">
             <img src="assets/projects/spinningthreads.jpg" alt="Spinning Threads book cover" loading="lazy" class="contain">
             <div class="overlay">
-              <p class="role">Author · Published April 2021</p>
               <p>A novel about love and storytelling: a young journalist trapped by a hurricane befriends an older woman and uncovers a decades-old mystery.</p>
             </div>
           </div>
           <h3><a href="https://www.amazon.com/dp/1636768571" target="_blank" rel="noopener">Spinning Threads ↗</a></h3>
+          <p class="role">Author · Published April 2021</p>
         </article>
 
       </div>

@@ -17,11 +17,11 @@ if (!reduceMotion) {
   }, { passive: true });
 }
 
-// Project tiles: tap (touch) or Enter/Space toggles the details overlay.
-document.querySelectorAll('.thumb').forEach((tile) => {
+// Project tiles and the headshot: tap (touch) or Enter/Space toggles the hover state.
+document.querySelectorAll('.thumb, .headshot').forEach((tile) => {
   const toggle = () => {
     const wasOpen = tile.classList.contains('open');
-    document.querySelectorAll('.thumb.open').forEach((t) => t.classList.remove('open'));
+    document.querySelectorAll('.thumb.open, .headshot.open').forEach((t) => t.classList.remove('open'));
     if (!wasOpen) tile.classList.add('open');
   };
   tile.addEventListener('click', toggle);
