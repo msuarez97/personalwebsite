@@ -233,13 +233,42 @@ h2::after {
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 20px;
 }
+/* Front: icon, pill and title. Hover / focus / tap: description slides over the card */
 .ai-card {
+  position: relative;
+  overflow: hidden;
+  min-height: 190px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background: var(--card);
   border: 1px solid var(--line);
   border-left: 3px solid var(--leaf);
   border-radius: 8px;
   padding: 22px 24px;
+  cursor: pointer;
+  outline: none;
+  transition: box-shadow .25s ease, transform .25s ease;
 }
+.ai-card:hover, .ai-card:focus-visible, .ai-card.open {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px -12px rgba(42, 58, 38, .45);
+}
+.ai-card:focus-visible { box-shadow: 0 0 0 3px var(--leaf); }
+/* small "+" in the corner hints there is more behind the card */
+.ai-card::after {
+  content: "+";
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 20px;
+  line-height: 1;
+  color: var(--leaf);
+}
+.ai-card:hover .overlay,
+.ai-card:focus-visible .overlay,
+.ai-card.open .overlay { opacity: 1; transform: none; }
+.ai-card .overlay { z-index: 1; }
 .ai-card svg {
   width: 26px; height: 26px;
   fill: none; stroke: var(--accent); stroke-width: 1.6;
@@ -263,11 +292,10 @@ h2::after {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  margin: 14px 0 8px;
+  margin: 16px 0 0;
 }
-.ai-card p { margin: 0; font-size: 15px; line-height: 1.55; color: #3d3b33; }
-.ai-card strong { color: var(--accent); }
-.ai-also { margin: 24px 0 0; font-size: 14.5px; color: var(--muted); }
+.ai-card .overlay p { margin: 0; font-size: 14.5px; line-height: 1.55; color: #f3efe4; }
+.ai-card .overlay strong { color: #cfe0c3; }
 
 /* Skills */
 .skills {
