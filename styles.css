@@ -1,0 +1,93 @@
+:root {
+  --bg: #fbfaf8;
+  --text: #1c1c1c;
+  --muted: #6b6b6b;
+  --line: #e6e3de;
+  --accent: #bf5700; /* UT burnt orange */
+  --tile: #f0ede8;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+a { color: inherit; text-decoration-color: var(--line); text-underline-offset: 3px; }
+a:hover { color: var(--accent); text-decoration-color: currentColor; }
+
+/* Header */
+.site-header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px 24px;
+  background: var(--bg);
+  z-index: 1;
+}
+.site-header .name { font-weight: 600; text-decoration: none; }
+.site-header nav { display: flex; gap: 24px; font-size: 15px; }
+.site-header nav a { color: var(--muted); text-decoration: none; }
+.site-header nav a:hover { color: var(--accent); }
+
+/* Layout */
+main { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+section { padding: 72px 0; border-top: 1px solid var(--line); scroll-margin-top: 64px; }
+section:first-child { border-top: none; padding-top: 96px; }
+
+h1, h2 { font-family: "Fraunces", Georgia, serif; font-weight: 500; letter-spacing: -0.01em; }
+h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); margin: 0 0 24px; line-height: 1.1; }
+h2 { font-size: 1.8rem; margin: 0 0 32px; }
+
+.about p, .contact p { max-width: 640px; }
+
+.links { display: flex; flex-wrap: wrap; gap: 24px; margin-top: 28px; font-weight: 500; }
+.links a { color: var(--accent); text-decoration: none; border-bottom: 1px solid currentColor; }
+
+/* Projects */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 48px 32px;
+}
+.project img,
+.project .placeholder {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  display: block;
+}
+.project img { object-fit: cover; object-position: top; }
+.project img.contain { object-fit: contain; background: var(--tile); }
+.project .placeholder {
+  display: grid;
+  place-items: center;
+  background: var(--tile);
+  color: var(--muted);
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 1.3rem;
+}
+.project h3 { font-size: 1.05rem; font-weight: 600; margin: 18px 0 2px; }
+.project h3 a { text-decoration: none; }
+.project .role { color: var(--accent); font-size: 14px; font-weight: 500; margin: 0 0 6px; }
+.project p { margin: 0; font-size: 15.5px; color: #3a3a3a; }
+
+footer { text-align: center; color: var(--muted); font-size: 14px; padding: 40px 24px 56px; }
+
+@media (max-width: 560px) {
+  body { font-size: 16px; }
+  .site-header nav { gap: 16px; }
+  section { padding: 56px 0; }
+}
